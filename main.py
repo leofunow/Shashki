@@ -612,6 +612,8 @@ def click(*args):
     XX = int(args[0].x / 50)
     if YY >= 10:
         YY = 9
+    if XX >= 10:
+        XX = 9
 
     if turn and (SHAHSKI[YY][XX] == 1 or SHAHSKI[YY][XX] == 3) or (not turn) and (
             SHAHSKI[YY][XX] == 2 or SHAHSKI[YY][XX] == 4):
@@ -624,6 +626,8 @@ def click2(*args):
     global canv
     if args[0].y >= 500:
         args[0].y = 475
+    if args[0].x >= 500:
+        args[0].x = 475
     if turn and (SHAHSKI[int(args[0].y / 50)][int(args[0].x / 50)] == 1 or SHAHSKI[int(args[0].y / 50)][
         int(args[0].x / 50)] == 3) or (not turn) and (SHAHSKI[int(args[0].y / 50)][
                                                           int(args[0].x / 50)] == 2 or SHAHSKI[int(args[0].y / 50)][
